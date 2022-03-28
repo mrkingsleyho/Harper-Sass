@@ -1,0 +1,93 @@
+// Blog Styling
+.blog-background {
+    @include background-image(url(../harper-assets/blog-image-1.jpg))
+}
+
+.blog {
+    padding: 10% 0;
+    background-color: $white;
+
+    // Sidebar
+    .flex-blog {
+        display: flex;
+        justify-content: space-between;
+
+        .blog-sidebar {
+            display: flex;
+            flex-direction: column;
+            background-color: $white;
+            padding: 0;
+            
+        }
+    }
+
+    .about-harper,
+    .recent-posts {
+        background-color: white;
+        padding: 30px;
+    }
+
+    .about-harper {
+        margin-bottom: 20px;
+
+        a {
+            font-family: $body-font;
+            color: $dark-blue;
+        }
+    }
+
+    span {
+        margin-right: 10px;
+    }
+
+    .blog-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+        width: 65%;
+
+
+        .blog-post-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .travels,
+            .single-post {
+                background-color: white;
+                padding: 30px;
+                margin-bottom: 20px;
+            }
+
+            .travels p {
+                margin: 15px 0;
+            }
+
+            .travels,
+            .single-post:last-of-type {
+                border-bottom: 5px solid $dark-blue;
+            }
+        }
+
+
+        .blog-form {
+            width: 100%;
+        }
+    }
+
+    // Single Posts
+    .single-post {
+        display: flex;
+
+        .single-pic {
+            width: calc(25% - 20px);
+            margin-right: 20px;
+        }
+
+        .single-text {
+            width: 75%;
+        }
+    }
+
+}
+

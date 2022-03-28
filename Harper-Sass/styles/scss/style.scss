@@ -1,0 +1,378 @@
+@import 'setup';
+@import 'variables';
+
+@import 'index';
+@import 'navigation';
+@import 'index';
+@import 'form';
+@import 'blog';
+@import 'contact';
+
+// Default Styling
+html {
+    font-size: 62.5%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 90%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+button,
+form,
+a,
+input,
+textarea,
+fieldset,
+label,
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+ul,
+li,
+a {
+    text-decoration: none;
+    list-style: none;
+    color: $text-color;
+}
+
+body {
+    @include font-size(20);
+    color: $text-color;
+    font-family: $body-font;
+    line-height: 32px;
+    overflow-x: hidden;
+}
+
+// Fonts 
+h1,
+h2,
+h3,
+h4,
+nav p,
+a {
+    font-family: $header-font;
+    letter-spacing: 1px;
+}
+
+// Headings & Text
+h1,
+.sticky {
+    line-height: 92px;    
+}
+
+h1 {
+    @include font-settings(100);
+}
+
+.sticky {
+    @include font-settings(80);
+    position: absolute;
+    top: 43%;
+}
+
+h2 {
+    @include font-settings(42);
+}
+
+h3,
+nav p {
+    @include font-settings(32);
+}
+
+h4 {
+    @include font-settings(24);
+}
+
+nav a,
+button a {
+    @include font-settings(20);
+}
+
+
+
+
+
+// Button Styling
+button {
+    background-color: $accent-color;
+    border-radius: 1px;
+    padding: 10px 30px;
+    max-width: 300px;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    a {
+        line-height: 32px;
+    } 
+}
+
+
+
+// Footer Styling
+footer {
+    background-color: $text-color;
+    color: $white;
+    text-align: center;
+    height: 5vh;
+
+}
+
+
+// Media Queries
+@include desktop {
+    // Harper Main Page
+    .header-text-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 10% 0;
+
+        .header-pic {
+            width: 60%;
+            margin-right: 0;
+
+            img {
+                top: initial;
+                box-shadow: 0px 0px 0px 20px white;
+            }
+        }
+
+        .everyday {
+            display: block;
+            position: relative;
+            right: 45%;
+            transform: rotate(270deg);
+        }
+
+        .logo {
+            margin: 10% 0;
+            padding-left: 20%;
+
+
+            img {
+                display: none;
+            }
+        }
+    }
+
+    // Who's Harper
+    .whos-harper {
+        .harper-container {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+
+    // Four Text
+    .four-text {
+        .mid-list {
+            flex-direction: column;
+        }
+    }
+
+    // Pic & Text
+    .pic-text {
+        .pic-text-container {
+            flex-direction: column;
+
+            .text-container {
+                padding: 9% 0;
+            }
+
+            .text-container:nth-of-type(2) {
+                border-bottom: 2px solid $text-color;
+            }
+        }
+    }
+
+    // Harper's Journey
+    .journey {
+
+        .journey-container {
+            flex-direction: column;
+            align-items: center;
+
+            .journey-text {
+                width: 100%;
+                text-align: center;
+                margin-top: 10%;
+            }
+        }
+
+
+    }
+
+    // Form
+    form {
+        width: 100%;
+
+        .personal-info {
+            flex-direction: column;
+     
+            input {
+
+                width: 100%;
+                
+            }
+         }
+    }
+
+    // Contact
+    .contact {
+
+        .contact-container {
+            justify-content: space-between;
+            flex-direction: column-reverse;
+
+        }
+
+        .address,
+        .socials {
+            text-align: center;
+        }
+        
+        .socials {
+            margin-bottom: 20px;
+        }
+    }
+    
+    aside {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    // Blog 
+    .blog {
+
+        .flex-blog {
+            justify-content: space-between;
+            flex-direction: column-reverse;
+            
+            .blog-sidebar,
+            .blog-container {
+
+                width: 100%;
+            }
+
+            .blog-sidebar {
+                text-align: center;
+            }
+        }
+    }
+
+
+}
+
+@include mobile-tablet {
+
+    .main-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 50px;
+        
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    .ham-input:checked ~ .hamburger-menu {
+        display: block;
+    }
+}
+
+@include mobile {
+    h1 {
+        @include font-size(70);
+    }
+
+    h2 {
+        @include font-size(36);
+    }
+
+    body {
+        @include font-size(16);
+    }
+
+    nav {
+        margin-bottom: 30px;
+    }
+
+    .hamburger {
+        right: 30px;
+    }
+
+    .four-text .mid-list p {
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .image-container img {
+        box-shadow: none;
+        
+    }
+
+    .journey {
+
+        .journey-container {
+            padding: 10% 0;
+    
+            .journey-pic {
+                width: 60%;
+                margin-right: 0;
+            }
+        }
+    }
+
+    .gallery-container {
+
+        .three-pic {
+            flex: calc(50% - 20px);
+            margin-left: 0;
+
+            &:nth-of-type(2) {
+                margin-right: 0;
+            }
+
+            &:last-of-type {
+                display: none;
+            }
+        }
+    }
+
+    footer {
+        height: unset;
+
+        p {
+            @include font-size(15);
+        }
+    }
+}
+

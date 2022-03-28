@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harper | Contact</title>
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./harper-assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./harper-assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./harper-assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./harper-assets/favicon_io/site.webmanifest">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/813177f008.js" crossorigin="anonymous"></script>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Oswald:400,700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="main-nav">
+                <li>
+                    <a href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
+                <li>
+                    <p>Harper</p>
+                </li>
+                <li>
+                    <a href="./blog.html">Blog</a>
+                </li>
+                <li>
+                    <a href="./contact.html">Contact</a>
+                </li>
+            </ul>
+            
+            <div tabindex="0" class="hamburger">
+                <label class="visually-hidden" for="ham-check">Open menu</label>
+                
+                <input type="checkbox" name="hamburger" id="ham-check" class="ham-input">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul class="hamburger-menu" id="ham">
+                    <li tabindex="0" class="ham-link">
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li tabindex="0" class="ham-link">
+                        <a href="#about">About</a>
+                    </li>
+                    <li tabindex="0" class="ham-link">
+                        <a href="./blog.html">Blog</a>
+                    </li>
+                    <li tabindex="0" class="ham-link">
+                        <a href="./contact.html">Contact</a>
+                    </li>
+                </ul>
+                
+            </div>
+
+        </nav>
+        <!-- Background Image + h1 -->
+        <div class="contact-background">
+            <div class="wrapper">
+            <h1 class="sticky">Contact Me</h1>
+            </div>
+        </div>
+    </header>
+
+    <main class="contact">
+
+        <div class="wrapper">
+            <div class="contact-container">
+                <!-- Sidebar -->
+                <aside class="sidebar">
+                    <ul class="socials">
+                        <li>
+                            <a href="https://www.facebook.com">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="address">
+                        <h4 class="email-address">info@email.com</h4>
+                        <p>123-456-7890</p>
+                        <p>123 Queen St West, Unit 10</p>
+                        <p>Toronto, Ontario</p>
+                        <p>M5V 2D5</p>
+                    </div>
+
+                    
+                </aside>
+
+                <!-- Form -->
+                <form action="">
+
+                    <fieldset class="personal-info">
+                        <label class="visually-hidden"
+                        for="name"></label>
+                        <input tabindex="0" type="text" required placeholder="Name" id="name">
+
+                        <label class="visually-hidden"
+                        for="email"></label>
+                        <input tabindex="0" type="email" id="email" required placeholder="Email address">
+                    </fieldset>
+                    
+                    <label class="visually-hidden"
+                    for="message"></label>
+                    <textarea tabindex="0" name="comments" required id="message" cols="60" rows="15" placeholder="Comment"></textarea>
+
+                    <button type="submit"><a>Post Comment</a></button>
+
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="contact-footer">
+        <p>Copyright© Kingsley Ho 2022 Seneca College</p>
+    </footer>
+
+</body>
+</html>
